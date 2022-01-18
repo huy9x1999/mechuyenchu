@@ -1,36 +1,37 @@
 import { createGlobalStyle } from 'styled-components';
-import { StyleConstants } from './StyleConstants';
-/* istanbul ignore next */
+import '@fontsource/source-sans-pro';
+
 export const GlobalStyle = createGlobalStyle`
   html,
   body {
     height: 100%;
     width: 100%;
-    line-height: 1.5;
+    
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding-top: ${StyleConstants.NAV_BAR_HEIGHT};
-    background-color: ${p => p.theme.background};
+    overflow-X:hidden;
+    font-family: "Source Sans Pro";
   }
 
-  body.fontLoaded {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  #root {
+    min-height: 100%;
+    min-width: 100%;
   }
-  
+
   p,
   label {
     line-height: 1.5em;
+    font-family: "Source Sans Pro";
   }
-
-  input, select, button {
-    font-family: inherit;
+  ::placeholder,::-webkit-input-placeholder,:-ms-input-placeholder{
+     font-family: "Source Sans Pro";
+  }
+  *,::before,::after{
+    font-family: "Source Sans Pro";
+  }
+  input, select {
+    font-family: "Source Sans Pro";
     font-size: inherit;
-  }
-
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 `;
